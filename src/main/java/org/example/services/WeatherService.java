@@ -15,7 +15,7 @@ public class WeatherService {
     }
     public WeatherObject getWeather(LatLon latLon){
         String url = "https://api.openweathermap.org/data/2.5/weather?lat=" + latLon.getLat() +
-               "&lon=" + latLon.getLon() + "&appid=" + API_KEY;
+               "&lon=" + latLon.getLon() + "&appid=" + API_KEY + "&units=imperial";
 
         return template.getForObject(url, WeatherObject.class);
     }
